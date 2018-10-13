@@ -73,8 +73,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="quiz-letters" translatesAutoresizingMaskIntoConstraints="NO" id="HIZ-5m-HGk">
+                                <rect key="frame" x="34" y="44" width="307" height="176"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I2A-zf-5v9">
-                                <rect key="frame" x="108" y="408" width="158" height="34"/>
+                                <rect key="frame" x="88" y="549" width="158" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.67779014780000002" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
@@ -83,10 +87,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="quiz-letters" translatesAutoresizingMaskIntoConstraints="NO" id="HIZ-5m-HGk">
-                                <rect key="frame" x="34" y="44" width="307" height="176"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -179,13 +179,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Geography-PNG-Transparent" width="409.60000610351562" height="409.60000610351562"/>
+        <image name="Geography-PNG-Transparent" width="170" height="170"/>
         <image name="background-yellow" width="750" height="1334"/>
-        <image name="idea-icon-12424" width="512" height="512"/>
-        <image name="itunes-icon-12" width="447" height="447"/>
-        <image name="quiz-letters" width="960" height="480"/>
-        <image name="red-check-mark-clipart" width="1200" height="1200"/>
-        <image name="sports-background-png-4" width="1000" height="1000"/>
-        <image name="unnamed" width="512" height="512"/>
+        <image name="idea-icon-12424" width="170" height="170"/>
+        <image name="itunes-icon-12" width="298" height="298"/>
+        <image name="quiz-letters" width="320" height="160"/>
+        <image name="red-check-mark-clipart" width="400" height="400"/>
+        <image name="sports-background-png-4" width="333" height="333"/>
+        <image name="unnamed" width="170" height="170"/>
     </resources>
 </document>
