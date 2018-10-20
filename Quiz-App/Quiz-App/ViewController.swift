@@ -8,13 +8,20 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController ,UITextFieldDelegate{
 
+    var prom:String?
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        let newLayer = CAGradientLayer()
+        newLayer.colors = [UIColor.clear.cgColor, UIColor.clear.cgColor]
+        newLayer.frame = view.frame
+        
+        view.layer.insertSublayer(newLayer, at: 0)
+        
     }
 
-    
+
 }
 
