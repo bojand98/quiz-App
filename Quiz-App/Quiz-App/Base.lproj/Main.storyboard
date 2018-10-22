@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -75,6 +76,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="pressedStartButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DWv-O6-AJ1"/>
                                     <segue destination="knP-YX-Ba7" kind="show" id="Pj1-fI-m7d"/>
                                 </connections>
                             </button>
@@ -116,6 +118,10 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <navigationItem key="navigationItem" id="mtk-ge-qzk"/>
+                    <connections>
+                        <outlet property="name" destination="fC8-Qk-MOK" id="RuJ-YR-DCL"/>
+                        <outlet property="startButton" destination="0y4-PS-7M0" id="rmy-Q3-o0L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -129,70 +135,95 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JC7-u9-NqJ">
-                                <rect key="frame" x="243" y="226" width="67" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                <state key="normal" title="History">
-                                    <color key="titleColor" red="0.67779014780000002" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose a quiz type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPB-U7-Vho">
-                                <rect key="frame" x="110" y="44" width="155.5" height="20.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a quiz type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPB-U7-Vho">
+                                <rect key="frame" x="0.0" y="40" width="375" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="s6i-2U-2g2"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="0.67779014780000002" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2w-k9-HIf">
-                                <rect key="frame" x="62" y="496" width="55" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                <state key="normal" title="Music">
-                                    <color key="titleColor" red="0.67779014780000002" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fcg-U4-c8e">
-                                <rect key="frame" x="20" y="357" width="138" height="131"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="itunes-icon-12"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oan-WY-CwB">
-                                <rect key="frame" x="238" y="496" width="51" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                <state key="normal" title="Sport">
-                                    <color key="titleColor" red="0.67779014780000002" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nSB-Hb-9Du">
-                                <rect key="frame" x="204" y="357" width="134" height="131"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="sports-background-png-4"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pwr-zX-viC">
-                                <rect key="frame" x="204" y="96" width="139" height="118"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="unnamed"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MBe-cM-CaZ">
-                                <rect key="frame" x="53.5" y="229.5" width="91" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <state key="normal" title="Geography">
-                                    <color key="titleColor" red="0.67779014780000002" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="9Qb-9Z-0KV" kind="show" id="yfF-jH-Fja"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ax-Go-sPZ">
-                                <rect key="frame" x="32" y="96" width="134" height="117"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="Geography-PNG-Transparent"/>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WN0-SL-KQZ">
+                                <rect key="frame" x="0.0" y="129" width="375" height="429"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2w-k9-HIf">
+                                        <rect key="frame" x="62" y="394" width="55" height="35"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                        <state key="normal" title="Music">
+                                            <color key="titleColor" red="0.67779014780000002" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ax-Go-sPZ">
+                                        <rect key="frame" x="20" y="20" width="153" height="128"/>
+                                        <state key="normal" image="Geography"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nSB-Hb-9Du">
+                                        <rect key="frame" x="203" y="259" width="134" height="124"/>
+                                        <state key="normal" backgroundImage="Sport-Icon"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oan-WY-CwB">
+                                        <rect key="frame" x="256" y="394" width="51" height="35"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                        <state key="normal" title="Sport">
+                                            <color key="titleColor" red="0.67779014780000002" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fcg-U4-c8e">
+                                        <rect key="frame" x="35" y="259" width="138" height="131"/>
+                                        <state key="normal" image="iTunes-icon"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pwr-zX-viC">
+                                        <rect key="frame" x="186" y="21" width="151" height="127"/>
+                                        <state key="normal" image="History-Icon"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JC7-u9-NqJ">
+                                        <rect key="frame" x="216" y="168" width="67" height="40"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                        <state key="normal" title="History">
+                                            <color key="titleColor" red="0.67779014780000002" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="830-N3-lNu">
+                                        <rect key="frame" x="54" y="156" width="101" height="40"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                        <state key="normal" title="Geography">
+                                            <color key="titleColor" red="0.67779014780000002" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Pwr-zX-viC" firstAttribute="top" secondItem="WN0-SL-KQZ" secondAttribute="top" constant="8" id="0va-2a-0aH"/>
+                                    <constraint firstAttribute="trailing" secondItem="Pwr-zX-viC" secondAttribute="trailing" constant="16" id="6oI-Cb-zXq"/>
+                                    <constraint firstItem="l2w-k9-HIf" firstAttribute="centerX" secondItem="fcg-U4-c8e" secondAttribute="centerX" id="7gw-gP-Ezv"/>
+                                    <constraint firstItem="fcg-U4-c8e" firstAttribute="leading" secondItem="WN0-SL-KQZ" secondAttribute="leading" constant="16" id="7rA-Bl-fCB"/>
+                                    <constraint firstItem="nSB-Hb-9Du" firstAttribute="top" secondItem="JC7-u9-NqJ" secondAttribute="bottom" constant="30" id="GKS-d7-Ukk"/>
+                                    <constraint firstItem="Oan-WY-CwB" firstAttribute="top" secondItem="nSB-Hb-9Du" secondAttribute="bottom" constant="8" id="INs-nB-LTp"/>
+                                    <constraint firstItem="830-N3-lNu" firstAttribute="centerX" secondItem="1ax-Go-sPZ" secondAttribute="centerX" id="IVY-6r-53m"/>
+                                    <constraint firstItem="1ax-Go-sPZ" firstAttribute="leading" secondItem="WN0-SL-KQZ" secondAttribute="leading" constant="16" id="PMT-ZH-hmx"/>
+                                    <constraint firstAttribute="trailing" secondItem="nSB-Hb-9Du" secondAttribute="trailing" constant="16" id="Vnf-BJ-HY7"/>
+                                    <constraint firstItem="Oan-WY-CwB" firstAttribute="centerX" secondItem="nSB-Hb-9Du" secondAttribute="centerX" id="Xms-OY-TGX"/>
+                                    <constraint firstItem="JC7-u9-NqJ" firstAttribute="centerX" secondItem="Pwr-zX-viC" secondAttribute="centerX" id="eGT-CS-Aow"/>
+                                    <constraint firstItem="830-N3-lNu" firstAttribute="top" secondItem="1ax-Go-sPZ" secondAttribute="bottom" constant="8" id="f4b-fc-V5C"/>
+                                    <constraint firstItem="fcg-U4-c8e" firstAttribute="top" secondItem="830-N3-lNu" secondAttribute="bottom" constant="30" id="fMq-yi-eMC"/>
+                                    <constraint firstItem="l2w-k9-HIf" firstAttribute="top" secondItem="fcg-U4-c8e" secondAttribute="bottom" constant="8" id="ftY-sb-8Mi"/>
+                                    <constraint firstItem="1ax-Go-sPZ" firstAttribute="top" secondItem="WN0-SL-KQZ" secondAttribute="top" constant="8" id="jAT-EH-wdk"/>
+                                    <constraint firstItem="JC7-u9-NqJ" firstAttribute="top" secondItem="Pwr-zX-viC" secondAttribute="bottom" constant="8" id="q7Q-65-3Hc"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YPB-U7-Vho" firstAttribute="leading" secondItem="oLc-P7-Tp1" secondAttribute="leading" id="5GH-T7-8f8"/>
+                            <constraint firstItem="YPB-U7-Vho" firstAttribute="trailing" secondItem="oLc-P7-Tp1" secondAttribute="trailing" id="DSO-g8-QGb"/>
+                            <constraint firstItem="oLc-P7-Tp1" firstAttribute="bottom" secondItem="WN0-SL-KQZ" secondAttribute="bottom" constant="109" id="GS0-fw-iN8"/>
+                            <constraint firstItem="WN0-SL-KQZ" firstAttribute="centerX" secondItem="oLc-P7-Tp1" secondAttribute="centerX" id="Hsu-Yu-05d"/>
+                            <constraint firstItem="WN0-SL-KQZ" firstAttribute="leading" secondItem="oLc-P7-Tp1" secondAttribute="leading" id="Rh5-cs-W4m"/>
+                            <constraint firstItem="WN0-SL-KQZ" firstAttribute="trailing" secondItem="oLc-P7-Tp1" secondAttribute="trailing" id="emn-FA-uqb"/>
+                            <constraint firstItem="WN0-SL-KQZ" firstAttribute="centerY" secondItem="oLc-P7-Tp1" secondAttribute="centerY" id="f32-Cp-vgB"/>
+                            <constraint firstItem="YPB-U7-Vho" firstAttribute="top" secondItem="oLc-P7-Tp1" secondAttribute="top" constant="20" id="xTN-pn-nww"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="oLc-P7-Tp1"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="FirstColor">
@@ -217,28 +248,86 @@
         <scene sceneID="xej-gw-Zfv">
             <objects>
                 <viewController id="9Qb-9Z-0KV" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="aAj-z5-50E">
+                    <view key="view" contentMode="scaleToFill" id="aAj-z5-50E" customClass="GradientView" customModule="Quiz_App" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="har-pA-Wz6">
+                                <rect key="frame" x="49" y="60" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pbx-JG-Ny9">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5m-hb-Gv4">
+                                <rect key="frame" x="136" y="217" width="69" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="more info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mah-tU-jjz">
+                                <rect key="frame" x="49" y="458" width="72" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XKG-FA-z5b">
+                                <rect key="frame" x="128" y="263" width="43" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="answ1">
+                                    <color key="titleColor" red="0.67779014780000002" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6l-6h-hC7">
+                                <rect key="frame" x="128" y="301" width="45" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="answ2">
+                                    <color key="titleColor" red="0.67779014780000002" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I52-eI-J4V">
+                                <rect key="frame" x="134" y="385" width="45" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="answ4">
+                                    <color key="titleColor" red="0.67779014780000002" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Tn-sl-A0Q">
+                                <rect key="frame" x="134" y="339" width="45" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="answ3">
+                                    <color key="titleColor" red="0.67779014780000002" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="8r4-QJ-7Fv"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="FirstColor">
+                                <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="SecondColor">
+                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ks-ba-Z7r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1239" y="17"/>
+            <point key="canvasLocation" x="1237.5999999999999" y="16.641679160419791"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Geography-PNG-Transparent" width="409.60000610351562" height="409.60000610351562"/>
+        <image name="Geography" width="240" height="240"/>
+        <image name="History-Icon" width="300" height="300"/>
+        <image name="Sport-Icon" width="300" height="300"/>
+        <image name="iTunes-icon" width="150" height="150"/>
         <image name="idea-icon-12424" width="512" height="512"/>
-        <image name="itunes-icon-12" width="447" height="447"/>
         <image name="quiz-letters" width="960" height="480"/>
         <image name="red-check-mark-clipart" width="1200" height="1200"/>
-        <image name="sports-background-png-4" width="1000" height="1000"/>
-        <image name="unnamed" width="512" height="512"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="4pm-T0-tJ4"/>
-    </inferredMetricsTieBreakers>
 </document>

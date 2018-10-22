@@ -9,7 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController ,UITextFieldDelegate{
-
+    
+    
+    
+    @IBOutlet weak var name: UITextField!
+    
+   
+    
+    
     var prom:String?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +26,6 @@ class ViewController: UIViewController ,UITextFieldDelegate{
         newLayer.frame = view.frame
         
         view.layer.insertSublayer(newLayer, at: 0)
-        
     }
 
 
