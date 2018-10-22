@@ -8,18 +8,26 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
-    var textFieldValue:String?
-
+class ViewController: UIViewController ,UITextFieldDelegate{
+    
+    
+    
+    @IBOutlet weak var name: UITextField!
+    
+   
+    
+    
+    var prom:String?
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        let newLayer = CAGradientLayer()
+        newLayer.colors = [UIColor.clear.cgColor, UIColor.clear.cgColor]
+        newLayer.frame = view.frame
         
-        // Do any additional setup after loading the view, typically from a nib.
+        view.layer.insertSublayer(newLayer, at: 0)
     }
 
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textFieldValue = textField.text
-        return true
-    }  
+
 }
 
