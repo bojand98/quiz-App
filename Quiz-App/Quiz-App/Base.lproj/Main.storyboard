@@ -71,6 +71,7 @@
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="TextFieldNameButton:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="SGR-hw-9EX"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Qcy-GN-MbZ"/>
                                 </connections>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="quiz-letters" translatesAutoresizingMaskIntoConstraints="NO" id="HIZ-5m-HGk">
@@ -90,10 +91,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="bqG-Ky-5ud" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6Pq-89-7OV"/>
-                            <constraint firstItem="bqG-Ky-5ud" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="F6m-t3-oY4"/>
-                            <constraint firstItem="bqG-Ky-5ud" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="m1k-3Y-nGt"/>
-                            <constraint firstItem="bqG-Ky-5ud" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nAf-OM-qZd"/>
+                            <constraint firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6Pq-89-7OV"/>
+                            <constraint firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="F6m-t3-oY4"/>
+                            <constraint firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="m1k-3Y-nGt"/>
+                            <constraint firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nAf-OM-qZd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -146,6 +147,9 @@
                                 <rect key="frame" x="16" y="360" width="156" height="146"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="itunes-icon-12"/>
+                                <connections>
+                                    <segue destination="Afq-Y2-MwH" kind="show" id="LX8-w4-FsK"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oan-WY-CwB">
                                 <rect key="frame" x="246" y="506" width="51" height="35"/>
@@ -160,8 +164,16 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="sports-background-png-4"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HBX-OF-vRI">
+                                <rect key="frame" x="39" y="300" width="101" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <state key="normal" title="Geography">
+                                    <color key="titleColor" red="0.67779014780000002" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uW2-GW-cO5">
-                                <rect key="frame" x="25" y="163" width="132" height="129"/>
+                                <rect key="frame" x="28" y="151" width="132" height="129"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="10" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Geography" image="Geography-PNG-Transparent">
@@ -183,12 +195,27 @@
             </objects>
             <point key="canvasLocation" x="517.60000000000002" y="16.641679160419791"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="SxJ-ti-bWL">
+            <objects>
+                <viewController id="Afq-Y2-MwH" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i61-53-6lB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Zsb-Op-QVj"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VgU-Nt-Zwv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1222" y="17"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Geography-PNG-Transparent" width="170" height="170"/>
         <image name="background-yellow" width="750" height="1334"/>
         <image name="idea-icon-12424" width="170" height="170"/>
-        <image name="itunes-icon-12" width="298" height="298"/>
+        <image name="itunes-icon-12" width="447" height="447"/>
         <image name="quiz-letters" width="320" height="160"/>
         <image name="red-check-mark-clipart" width="400" height="400"/>
         <image name="sports-background-png-4" width="333" height="333"/>
