@@ -17,6 +17,7 @@
 		3C6EB16A215A9F5A00289C74 /* Quiz_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6EB169215A9F5A00289C74 /* Quiz_AppTests.swift */; };
 		3C6EB175215A9F5A00289C74 /* Quiz_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6EB174215A9F5A00289C74 /* Quiz_AppUITests.swift */; };
 		3C7E052E217CE53B0056719F /* QuizApp-SportsCatQ&A.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3C7E052D217CE53B0056719F /* QuizApp-SportsCatQ&A.txt */; };
+		3CC736D4217F9D2D00481E5B /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC736D3217F9D2D00481E5B /* ViewController3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		3C6EB174215A9F5A00289C74 /* Quiz_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz_AppUITests.swift; sourceTree = "<group>"; };
 		3C6EB176215A9F5A00289C74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C7E052D217CE53B0056719F /* QuizApp-SportsCatQ&A.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "QuizApp-SportsCatQ&A.txt"; path = "../../QuizApp-SportsCatQ&A.txt"; sourceTree = "<group>"; };
+		3CC736D3217F9D2D00481E5B /* ViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				3C6EB154215A9F5500289C74 /* AppDelegate.swift */,
 				3C6EB156215A9F5500289C74 /* ViewController.swift */,
 				3C4FAB1321722E3A00834377 /* ViewController2.swift */,
+				3CC736D3217F9D2D00481E5B /* ViewController3.swift */,
 				3C6EB158215A9F5500289C74 /* Main.storyboard */,
 				3C6CB9EB2173B13100DF6FF4 /* GradientView.swift */,
 				3C6EB15B215A9F5A00289C74 /* Assets.xcassets */,
@@ -266,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CC736D4217F9D2D00481E5B /* ViewController3.swift in Sources */,
 				3C6EB157215A9F5500289C74 /* ViewController.swift in Sources */,
 				3C6EB155215A9F5500289C74 /* AppDelegate.swift in Sources */,
 				3C6CB9EC2173B13100DF6FF4 /* GradientView.swift in Sources */,
