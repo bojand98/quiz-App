@@ -151,6 +151,9 @@
                                         <state key="normal" title="Music">
                                             <color key="titleColor" red="0.67779014780000002" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="9Qb-9Z-0KV" kind="show" id="yiF-IU-om9"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ax-Go-sPZ">
                                         <rect key="frame" x="20" y="20" width="153" height="128"/>
@@ -162,6 +165,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nSB-Hb-9Du">
                                         <rect key="frame" x="203" y="259" width="134" height="124"/>
                                         <state key="normal" backgroundImage="Sport-Icon"/>
+                                        <connections>
+                                            <segue destination="9Qb-9Z-0KV" kind="show" id="cQA-05-yg1"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oan-WY-CwB">
                                         <rect key="frame" x="256" y="394" width="51" height="35"/>
@@ -169,14 +175,23 @@
                                         <state key="normal" title="Sport">
                                             <color key="titleColor" red="0.67779014780000002" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="9Qb-9Z-0KV" kind="show" id="hbJ-h9-dya"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fcg-U4-c8e">
                                         <rect key="frame" x="35" y="259" width="138" height="131"/>
                                         <state key="normal" image="iTunes-icon"/>
+                                        <connections>
+                                            <segue destination="9Qb-9Z-0KV" kind="show" id="Tg7-ux-IY7"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pwr-zX-viC">
                                         <rect key="frame" x="186" y="21" width="151" height="127"/>
                                         <state key="normal" image="History-Icon"/>
+                                        <connections>
+                                            <segue destination="9Qb-9Z-0KV" kind="show" id="bcu-kt-n2a"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JC7-u9-NqJ">
                                         <rect key="frame" x="216" y="168" width="67" height="40"/>
@@ -184,6 +199,9 @@
                                         <state key="normal" title="History">
                                             <color key="titleColor" red="0.67779014780000002" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="9Qb-9Z-0KV" kind="show" id="0yq-rw-ECf"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="830-N3-lNu">
                                         <rect key="frame" x="54" y="156" width="101" height="40"/>
@@ -191,6 +209,9 @@
                                         <state key="normal" title="Geography">
                                             <color key="titleColor" red="0.67779014780000002" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="9Qb-9Z-0KV" kind="show" id="9ha-jQ-vfP"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -321,6 +342,9 @@
                                                         <state key="normal" title="Answer1">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="answerPressed:" destination="9Qb-9Z-0KV" eventType="touchUpInside" id="WYk-iT-w2B"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BMl-WU-2Er">
                                                         <rect key="frame" x="0.0" y="61" width="375" height="54.5"/>
@@ -328,6 +352,9 @@
                                                         <state key="normal" title="Answer2">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="answerPressed:" destination="9Qb-9Z-0KV" eventType="touchUpInside" id="VsM-qd-dLl"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HdA-LS-3es">
                                                         <rect key="frame" x="0.0" y="121.5" width="375" height="55"/>
@@ -335,6 +362,9 @@
                                                         <state key="normal" title="Answer3">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="answerPressed:" destination="9Qb-9Z-0KV" eventType="touchUpInside" id="Tdc-iM-vNz"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9dh-9a-Mtn">
                                                         <rect key="frame" x="0.0" y="182.5" width="375" height="54.5"/>
@@ -343,6 +373,9 @@
                                                         <state key="normal" title="Answer4">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="answerPressed:" destination="9Qb-9Z-0KV" eventType="touchUpInside" id="gTz-og-LHj"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -394,6 +427,16 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <connections>
+                        <outlet property="mainImage" destination="7bk-dQ-FUo" id="V09-S9-J6H"/>
+                        <outlet property="optionA" destination="jg9-yh-4v4" id="9WN-hF-AXr"/>
+                        <outlet property="optionB" destination="BMl-WU-2Er" id="Ozw-Sn-pZ9"/>
+                        <outlet property="optionC" destination="HdA-LS-3es" id="D0N-ma-Gqi"/>
+                        <outlet property="optionD" destination="9dh-9a-Mtn" id="GgJ-Tp-kno"/>
+                        <outlet property="questionCounterLabel" destination="1zh-K9-ttv" id="Ao1-90-typ"/>
+                        <outlet property="questionLabel" destination="z6b-tU-dWO" id="GIN-at-yFR"/>
+                        <outlet property="scoreLabel" destination="4LA-83-CRN" id="wTE-w8-5cl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ks-ba-Z7r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -409,4 +452,7 @@
         <image name="quiz-letters" width="960" height="480"/>
         <image name="red-check-mark-clipart" width="1200" height="1200"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="yiF-IU-om9"/>
+    </inferredMetricsTieBreakers>
 </document>
