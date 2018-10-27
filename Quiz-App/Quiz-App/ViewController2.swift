@@ -34,38 +34,9 @@ class Prasanje{
 
 class ViewController2: UIViewController {
     
-//    var txtFile: String?
-//    var prasanjaNiza:[Prasanje] = []
-//    var momentalnoPrasanje:Prasanje
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        if let filePath = Bundle.main.path(forResource: "QuizApp-SportsCatQ&A", ofType: "txt"){
-//            do {
-//                let contents = try String(contentsOfFile: filePath)
-//                print(contents)
-//                let lines = contents.split(separator: "\n")
-//                var counter:Int = 0
-//                while counter < lines.count {
-//                    let prasanje = lines[counter]
-//                    let odgovor1 = lines[counter+1]
-//                    let odgovor2 = lines[counter+1]
-//                    let odgovor3 = lines[counter+1]
-//                    let odgovor4 = lines[counter+1]
-//                    let tocenOdg = lines[counter+1]
-//
-//
-//
-//                    counter += 8
-//                }
-//
-//            }catch{
-//
-//            }
-//        }
 
-//    func refresh(){
-//
-//    }
     }
 }

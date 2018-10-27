@@ -11,7 +11,6 @@ import UIKit
 class ViewController: UIViewController ,UITextFieldDelegate{
     
     
-    
     @IBOutlet weak var name: UITextField!
     
    
