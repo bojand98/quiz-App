@@ -49,6 +49,7 @@ class ViewController3: UIViewController {
     @IBOutlet weak var optionB: UIButton!
     @IBOutlet weak var optionC: UIButton!
     @IBOutlet weak var optionD: UIButton!
+    @IBOutlet weak var moreInfoLabel: UILabel!
     
     //actions bellow this
     
@@ -73,6 +74,7 @@ class ViewController3: UIViewController {
     func updateUI(){
         
     }
+   
     
     var txtFile: String?
     var listOfQuestions:[Question] = []
@@ -81,48 +83,56 @@ class ViewController3: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let filePath = Bundle.main.path(forResource: "Sport", ofType: "txt"){
+        func shuffleQuestion(questionArr:[Question] )-> [Question]{
+            return questionArr.shuffled()
+        }
+        
+        if let filePath = Bundle.main.path(forResource: "Geo-Q&A", ofType: "txt"){
             do {
-                let contents = try String(contentsOfFile: filePath)
-                print(contents)
+                //print("Ima fajl")
+                let contents = try String(contentsOfFile: filePath, encoding: .utf8)
+                //print(contents)
                 
                 let lines = contents.split(separator: "\n")
-                var counterLine:Int = 1
-                var i:Int = 1
-                
-                while counterLine <= lines.count {
+                var counterLine:Int = 0
+                var questionArray: [Question] = []
+//                print(lines.count)
+                while counterLine+7 <= lines.count {
                     
-                    if i == 1
-                    {
-                        let question = lines[counterLine]
-                    }
-                    else if i == 2{
-                        let optionA = lines[counterLine+1]
-                    }
-                    else if i == 3{
-                        let optionB = lines[counterLine+1]
-                    }
-                    else if i == 4{
-                        let optionC = lines[counterLine+1]
-                    }
-                    else if i == 5{
-                        let optionD = lines[counterLine+1]
-                    }
-                    else if i == 6{
-                        let correctAnswer = lines[counterLine+1]
-                    }
-                        
-                    else if i == 7{
-                        let moreInfo = lines[counterLine+1]
-                    }
-                    else if i == 8{
-                        let questionImage = lines[counterLine+1]
-                    }
-                    if i==8 {
-                        i=0
-                       // var questionInstance:Question = Question(question: <#T##String#>, optionA: <#T##String#>, optionB: <#T##String#>, optionC: <#T##String#>, optionD: <#T##String#>, correctAnswer: <#T##Int#>, moreInfo: <#T##String#>, questionImage: <#T##String#>)
-                    }
+                    let ques = lines[counterLine]
+                    let optA = lines[counterLine+1]
+                    let optB = lines[counterLine+2]
+                    let optC = lines[counterLine+3]
+                    let optD = lines[counterLine+4]
+                    let correctAnsw = lines[counterLine+5]
+                    let moreInf = lines[counterLine+6]
+                    let questionImg = lines[counterLine+7]
+                    
+                    var questionInstnce = Question(question: String(ques), optionA: String(optA), optionB: String(optB), optionC:String(optC)
+                        , optionD: String(optD), correctAnswer: Int(correctAnsw)!, moreInfo: String(moreInf), questionImage: String(questionImg))
+                    questionArray.append(questionInstnce)
+//                    print("EVE TI ")
+//                    print(questionInstnce.question)
+                    counterLine+=8
                 }
+                
+                var shuffledArr = shuffleQuestion(questionArr: questionArray)
+                var currentScore: Int = 0
+                var currentQuestionNum: Int = 1
+                for i in 1...9{
+                    questionCounterLabel.text = String(currentQuestionNum)
+                    scoreLabel.text = String(currentScore)
+                    questionLabel.text = shuffledArr[i].question
+                    optionA.setTitle(shuffledArr[i].optionA, for: .normal)
+                    optionB.setTitle(shuffledArr[i].optionB, for: .normal)
+                    optionC.setTitle(shuffledArr[i].optionC, for: .normal)
+                    optionD.setTitle(shuffledArr[i].optionD, for: .normal)
+                    moreInfoLabel.text = shuffledArr[i].moreInfo
+                    mainImage.image = UIImage(named: shuffledArr[i].questionImage)
+                    
+                    currentQuestionNum += 1
+                }
+                
             }
             catch{
                 print(error)
@@ -131,6 +141,8 @@ class ViewController3: UIViewController {
         func refresh(){
             
         }
+        
+       
     }
 }
 
