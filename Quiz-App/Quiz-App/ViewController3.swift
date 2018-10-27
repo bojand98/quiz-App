@@ -53,28 +53,21 @@ class ViewController3: UIViewController {
     
     //actions bellow this
     
+    var answerPressedVar:Int?
     @IBAction func answerPressed(_ sender: UIButton) {
         if sender.tag == 1 {
-            print("option A choosed")
+            answerPressedVar = 1
         }
         else if sender.tag == 2 {
-            print("option B choosed")
+            answerPressedVar = 2
         }
         else if sender.tag == 3 {
-            print("option C choosed")
+            answerPressedVar = 3
         }
         else if sender.tag == 4 {
-            print("option D choosed")
+            answerPressedVar = 4
         }
     }
-    
-    func updateQuestion(){
-        
-    }
-    func updateUI(){
-        
-    }
-   
     
     var txtFile: String?
     var listOfQuestions:[Question] = []
@@ -86,6 +79,8 @@ class ViewController3: UIViewController {
         func shuffleQuestion(questionArr:[Question] )-> [Question]{
             return questionArr.shuffled()
         }
+        
+        
         
         if let filePath = Bundle.main.path(forResource: "Geo-Q&A", ofType: "txt"){
             do {
@@ -118,21 +113,11 @@ class ViewController3: UIViewController {
                 
                 var shuffledArr = shuffleQuestion(questionArr: questionArray)
                 var currentScore: Int = 0
-                var currentQuestionNum: Int = 1
+                var numOfCorrectAnsw:Int = 0
                 
-                questionCounterLabel.text = String(currentQuestionNum) + "/10"
-                scoreLabel.text = "Score: " + String(currentScore)
-                questionLabel.text = shuffledArr[0].question
-                optionA.setTitle(shuffledArr[0].optionA, for: .normal)
-                optionB.setTitle(shuffledArr[0].optionB, for: .normal)
-                optionC.setTitle(shuffledArr[0].optionC, for: .normal)
-                optionD.setTitle(shuffledArr[0].optionD, for: .normal)
-                moreInfoLabel.text = shuffledArr[0].moreInfo
-                mainImage.image = UIImage(named: shuffledArr[0].questionImage)
-                
-                func refresh(){
-                    for i in 1...9{
-                        questionCounterLabel.text = String(currentQuestionNum) + "/10"
+               
+                    for i in 0...9{
+                        questionCounterLabel.text = String(i+1) + "/10"
                         scoreLabel.text = "Score: " + String(currentScore)
                         questionLabel.text = shuffledArr[i].question
                         optionA.setTitle(shuffledArr[i].optionA, for: .normal)
@@ -141,14 +126,20 @@ class ViewController3: UIViewController {
                         optionD.setTitle(shuffledArr[i].optionD, for: .normal)
                         moreInfoLabel.text = shuffledArr[i].moreInfo
                         mainImage.image = UIImage(named: shuffledArr[i].questionImage)
-                        currentQuestionNum += 1
+                        
+                        if answerPressedVar == shuffledArr[i].correctAnswer {
+                            currentScore += 10
+                            continue
+                        }
+                        else{
+                            break
+                        }
+                        
                     }
-                }
-             
                 
             }
             catch{
-                print(error)
+                print("error")
             }
         }
        

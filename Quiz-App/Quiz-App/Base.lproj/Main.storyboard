@@ -142,30 +142,31 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="574-wH-H76">
-                                <rect key="frame" x="0.0" y="61" width="375" height="606"/>
+                                <rect key="frame" x="0.0" y="81" width="375" height="586"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hEN-lm-r59" userLabel="LeftStack View">
-                                        <rect key="frame" x="0.0" y="0.0" width="185" height="606"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="185" height="586"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JF5-WB-Unk" userLabel="GeoView">
-                                                <rect key="frame" x="0.0" y="0.0" width="185" height="303"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="185" height="293"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jdg-K4-qyf" userLabel="GeoView">
-                                                        <rect key="frame" x="0.0" y="0.0" width="185" height="303"/>
+                                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jdg-K4-qyf" userLabel="GeoView">
+                                                        <rect key="frame" x="0.0" y="8" width="185" height="293"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OKJ-II-zEI">
-                                                                <rect key="frame" x="16" y="87.5" width="153" height="128"/>
+                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OKJ-II-zEI">
+                                                                <rect key="frame" x="16" y="82.5" width="153" height="128"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="128" id="0Xl-uQ-2lR"/>
                                                                     <constraint firstAttribute="width" constant="153" id="ptC-HH-NB6"/>
                                                                 </constraints>
                                                                 <state key="normal" image="Geography"/>
                                                                 <connections>
+                                                                    <action selector="quizTypeButtonPressed:" destination="knP-YX-Ba7" eventType="touchUpInside" id="2s1-TR-8h9"/>
                                                                     <segue destination="9Qb-9Z-0KV" kind="show" id="ZRm-BP-2ew"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wKm-Zq-g8c">
-                                                                <rect key="frame" x="42" y="223" width="101" height="40"/>
+                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wKm-Zq-g8c">
+                                                                <rect key="frame" x="42" y="218" width="101" height="40"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="101" id="ekj-Xv-WeM"/>
                                                                     <constraint firstAttribute="height" constant="40" id="gio-zW-0z5"/>
@@ -175,6 +176,7 @@
                                                                     <color key="titleColor" red="0.67779014780000002" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
                                                                 <connections>
+                                                                    <action selector="quizTypeButtonPressed:" destination="knP-YX-Ba7" eventType="touchUpInside" id="0sH-e8-vL0"/>
                                                                     <segue destination="9Qb-9Z-0KV" kind="show" id="AoD-1Y-eqm"/>
                                                                 </connections>
                                                             </button>
@@ -198,21 +200,22 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yul-4Y-Jwh" userLabel="MusicView">
-                                                <rect key="frame" x="0.0" y="303" width="185" height="303"/>
+                                                <rect key="frame" x="0.0" y="293" width="185" height="293"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fcg-U4-c8e">
-                                                        <rect key="frame" x="23.5" y="86" width="138" height="131"/>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fcg-U4-c8e">
+                                                        <rect key="frame" x="23.5" y="81" width="138" height="131"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="138" id="AS6-Qw-XBU"/>
                                                             <constraint firstAttribute="height" constant="131" id="jjC-IM-GbD"/>
                                                         </constraints>
                                                         <state key="normal" image="iTunes-icon"/>
                                                         <connections>
+                                                            <action selector="quizTypeButtonPressed:" destination="knP-YX-Ba7" eventType="touchUpInside" id="aM2-GL-uVX"/>
                                                             <segue destination="9Qb-9Z-0KV" kind="show" id="TzA-Xx-1Kr"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2w-k9-HIf">
-                                                        <rect key="frame" x="65" y="225" width="55" height="35"/>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2w-k9-HIf">
+                                                        <rect key="frame" x="65" y="220" width="55" height="35"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="35" id="VW3-gs-vqA"/>
                                                             <constraint firstAttribute="width" constant="55" id="wsX-ow-TLD"/>
@@ -222,6 +225,7 @@
                                                             <color key="titleColor" red="0.67779014780000002" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
+                                                            <action selector="quizTypeButtonPressed:" destination="knP-YX-Ba7" eventType="touchUpInside" id="OGb-61-udn"/>
                                                             <segue destination="9Qb-9Z-0KV" kind="show" id="HBB-wd-ACV"/>
                                                         </connections>
                                                     </button>
@@ -244,24 +248,25 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Qtc-sk-3qq" userLabel="RightStack View">
-                                        <rect key="frame" x="190" y="0.0" width="185" height="606"/>
+                                        <rect key="frame" x="190" y="0.0" width="185" height="586"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g3R-33-sDm" userLabel="HistoryView">
-                                                <rect key="frame" x="0.0" y="0.0" width="185" height="303"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="185" height="293"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pwr-zX-viC">
-                                                        <rect key="frame" x="17" y="88" width="151" height="127"/>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pwr-zX-viC">
+                                                        <rect key="frame" x="17" y="83" width="151" height="127"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="151" id="UGN-O5-gZ9"/>
                                                             <constraint firstAttribute="height" constant="127" id="f3w-LB-Ssz"/>
                                                         </constraints>
                                                         <state key="normal" image="History-Icon"/>
                                                         <connections>
+                                                            <action selector="quizTypeButtonPressed:" destination="knP-YX-Ba7" eventType="touchUpInside" id="1Ou-DH-Bzi"/>
                                                             <segue destination="9Qb-9Z-0KV" kind="show" id="PCS-2X-fuR"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JC7-u9-NqJ">
-                                                        <rect key="frame" x="59" y="223" width="67" height="40"/>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JC7-u9-NqJ">
+                                                        <rect key="frame" x="59" y="218" width="67" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="ODd-xo-3Hd"/>
                                                             <constraint firstAttribute="width" constant="67" id="pUn-mv-d5Q"/>
@@ -271,6 +276,7 @@
                                                             <color key="titleColor" red="0.67779014780000002" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
+                                                            <action selector="quizTypeButtonPressed:" destination="knP-YX-Ba7" eventType="touchUpInside" id="I5p-Lp-Hr6"/>
                                                             <segue destination="9Qb-9Z-0KV" kind="show" id="4tL-Wa-tph"/>
                                                         </connections>
                                                     </button>
@@ -285,26 +291,28 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R9M-l7-Hzn" userLabel="SportView">
-                                                <rect key="frame" x="0.0" y="303" width="185" height="303"/>
+                                                <rect key="frame" x="0.0" y="293" width="185" height="293"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nSB-Hb-9Du">
-                                                        <rect key="frame" x="25.5" y="89.5" width="134" height="124"/>
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nSB-Hb-9Du">
+                                                        <rect key="frame" x="25.5" y="84.5" width="134" height="124"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="124" id="173-AP-Q1c"/>
                                                             <constraint firstAttribute="width" constant="134" id="tDc-pq-MwB"/>
                                                         </constraints>
                                                         <state key="normal" backgroundImage="Sport-Icon"/>
                                                         <connections>
+                                                            <action selector="quizTypeButtonPressed:" destination="knP-YX-Ba7" eventType="touchUpInside" id="p93-f7-IE8"/>
                                                             <segue destination="9Qb-9Z-0KV" kind="show" id="xRG-hy-Kwq"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oan-WY-CwB">
-                                                        <rect key="frame" x="67" y="222" width="51" height="35"/>
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oan-WY-CwB">
+                                                        <rect key="frame" x="67" y="217" width="51" height="35"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                                         <state key="normal" title="Sport">
                                                             <color key="titleColor" red="0.67779014780000002" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
+                                                            <action selector="quizTypeButtonPressed:" destination="knP-YX-Ba7" eventType="touchUpInside" id="iWC-wF-Dfc"/>
                                                             <segue destination="9Qb-9Z-0KV" kind="show" id="mOU-Qo-GRz"/>
                                                         </connections>
                                                     </button>
@@ -338,7 +346,7 @@
                             <constraint firstItem="YPB-U7-Vho" firstAttribute="trailing" secondItem="oLc-P7-Tp1" secondAttribute="trailing" id="DSO-g8-QGb"/>
                             <constraint firstAttribute="trailing" secondItem="574-wH-H76" secondAttribute="trailing" id="G8W-iu-5Nk"/>
                             <constraint firstItem="574-wH-H76" firstAttribute="leading" secondItem="oLc-P7-Tp1" secondAttribute="leading" id="S05-EZ-byx"/>
-                            <constraint firstItem="574-wH-H76" firstAttribute="top" secondItem="YPB-U7-Vho" secondAttribute="bottom" id="esJ-bF-CHA"/>
+                            <constraint firstItem="574-wH-H76" firstAttribute="top" secondItem="YPB-U7-Vho" secondAttribute="bottom" constant="20" id="esJ-bF-CHA"/>
                             <constraint firstItem="oLc-P7-Tp1" firstAttribute="bottom" secondItem="574-wH-H76" secondAttribute="bottom" id="hJJ-tq-xjI"/>
                             <constraint firstItem="YPB-U7-Vho" firstAttribute="top" secondItem="oLc-P7-Tp1" secondAttribute="top" constant="20" id="xTN-pn-nww"/>
                         </constraints>
@@ -352,6 +360,16 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <connections>
+                        <outlet property="geoButton" destination="OKJ-II-zEI" id="3Oy-en-sa3"/>
+                        <outlet property="geoButton2" destination="wKm-Zq-g8c" id="AaY-Q0-A2j"/>
+                        <outlet property="historyButton" destination="Pwr-zX-viC" id="gSH-lx-odB"/>
+                        <outlet property="historyButton2" destination="JC7-u9-NqJ" id="CtY-xd-0eX"/>
+                        <outlet property="musicButton" destination="fcg-U4-c8e" id="PNR-OA-TAJ"/>
+                        <outlet property="musicButton2" destination="l2w-k9-HIf" id="oix-yj-GJs"/>
+                        <outlet property="sportButton" destination="nSB-Hb-9Du" id="neD-Ur-QAL"/>
+                        <outlet property="sportButton2" destination="Oan-WY-CwB" id="h1y-jG-F5q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TOK-Xu-Pac" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -541,15 +559,15 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Geography" width="150" height="150"/>
-        <image name="History-Icon" width="150" height="150"/>
-        <image name="Sport-Icon" width="150" height="150"/>
+        <image name="Geography" width="240" height="240"/>
+        <image name="History-Icon" width="300" height="300"/>
+        <image name="Sport-Icon" width="300" height="300"/>
         <image name="iTunes-icon" width="150" height="150"/>
-        <image name="idea-icon-12424" width="170" height="170"/>
-        <image name="quiz-letters" width="320" height="160"/>
-        <image name="red-check-mark-clipart" width="400" height="400"/>
+        <image name="idea-icon-12424" width="512" height="512"/>
+        <image name="quiz-letters" width="960" height="480"/>
+        <image name="red-check-mark-clipart" width="1200" height="1200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ZRm-BP-2ew"/>
+        <segue reference="xRG-hy-Kwq"/>
     </inferredMetricsTieBreakers>
 </document>
