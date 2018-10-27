@@ -119,28 +119,39 @@ class ViewController3: UIViewController {
                 var shuffledArr = shuffleQuestion(questionArr: questionArray)
                 var currentScore: Int = 0
                 var currentQuestionNum: Int = 1
-                for i in 1...9{
-                    questionCounterLabel.text = String(currentQuestionNum)
-                    scoreLabel.text = String(currentScore)
-                    questionLabel.text = shuffledArr[i].question
-                    optionA.setTitle(shuffledArr[i].optionA, for: .normal)
-                    optionB.setTitle(shuffledArr[i].optionB, for: .normal)
-                    optionC.setTitle(shuffledArr[i].optionC, for: .normal)
-                    optionD.setTitle(shuffledArr[i].optionD, for: .normal)
-                    moreInfoLabel.text = shuffledArr[i].moreInfo
-                    mainImage.image = UIImage(named: shuffledArr[i].questionImage)
-                    
-                    currentQuestionNum += 1
+                
+                questionCounterLabel.text = String(currentQuestionNum) + "/10"
+                scoreLabel.text = "Score: " + String(currentScore)
+                questionLabel.text = shuffledArr[0].question
+                optionA.setTitle(shuffledArr[0].optionA, for: .normal)
+                optionB.setTitle(shuffledArr[0].optionB, for: .normal)
+                optionC.setTitle(shuffledArr[0].optionC, for: .normal)
+                optionD.setTitle(shuffledArr[0].optionD, for: .normal)
+                moreInfoLabel.text = shuffledArr[0].moreInfo
+                mainImage.image = UIImage(named: shuffledArr[0].questionImage)
+                
+                func refresh(){
+                    for i in 1...9{
+                        questionCounterLabel.text = String(currentQuestionNum) + "/10"
+                        scoreLabel.text = "Score: " + String(currentScore)
+                        questionLabel.text = shuffledArr[i].question
+                        optionA.setTitle(shuffledArr[i].optionA, for: .normal)
+                        optionB.setTitle(shuffledArr[i].optionB, for: .normal)
+                        optionC.setTitle(shuffledArr[i].optionC, for: .normal)
+                        optionD.setTitle(shuffledArr[i].optionD, for: .normal)
+                        moreInfoLabel.text = shuffledArr[i].moreInfo
+                        mainImage.image = UIImage(named: shuffledArr[i].questionImage)
+                        currentQuestionNum += 1
+                    }
                 }
+             
                 
             }
             catch{
                 print(error)
             }
         }
-        func refresh(){
-            
-        }
+       
         
        
     }
