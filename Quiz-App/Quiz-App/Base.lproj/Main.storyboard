@@ -487,13 +487,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Geography" width="240" height="240"/>
-        <image name="History-Icon" width="300" height="300"/>
-        <image name="Sport-Icon" width="300" height="300"/>
+        <image name="Geography" width="150" height="150"/>
+        <image name="History-Icon" width="150" height="150"/>
+        <image name="Sport-Icon" width="150" height="150"/>
         <image name="iTunes-icon" width="150" height="150"/>
-        <image name="idea-icon-12424" width="512" height="512"/>
-        <image name="quiz-letters" width="960" height="480"/>
-        <image name="red-check-mark-clipart" width="1200" height="1200"/>
+        <image name="idea-icon-12424" width="170" height="170"/>
+        <image name="quiz-letters" width="320" height="160"/>
+        <image name="red-check-mark-clipart" width="400" height="400"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="bcu-kt-n2a"/>
