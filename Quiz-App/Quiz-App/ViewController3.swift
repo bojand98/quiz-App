@@ -8,6 +8,33 @@
 
 import UIKit
 
+
+class Question{
+    
+    let question: String
+    let optionA: String
+    let optionB: String
+    let optionC: String
+    let optionD: String
+    let correctAnswer: Int
+    let moreInfo: String
+    let questionImage: String
+    
+    init(question: String, optionA: String,optionB: String, optionC: String,optionD: String, correctAnswer:Int,
+         moreInfo: String,questionImage: String) {
+        
+        self.question=question
+        self.optionA=optionA
+        self.optionB=optionB
+        self.optionC=optionC
+        self.optionD=optionD
+        self.correctAnswer=correctAnswer
+        self.moreInfo=moreInfo
+        self.questionImage=questionImage
+    }
+}
+
+
 class ViewController3: UIViewController {
 
     
@@ -40,16 +67,70 @@ class ViewController3: UIViewController {
         }
     }
     
+    func updateQuestion(){
+        
+    }
+    func updateUI(){
+        
+    }
     
-    
+    var txtFile: String?
+    var listOfQuestions:[Question] = []
+    var currentQuestion:Question?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        if let filePath = Bundle.main.path(forResource: "Sport", ofType: "txt"){
+            do {
+                let contents = try String(contentsOfFile: filePath)
+                print(contents)
+                
+                let lines = contents.split(separator: "\n")
+                var counterLine:Int = 1
+                var i:Int = 1
+                
+                while counterLine <= lines.count {
+                    
+                    if i == 1
+                    {
+                        let question = lines[counterLine]
+                    }
+                    else if i == 2{
+                        let optionA = lines[counterLine+1]
+                    }
+                    else if i == 3{
+                        let optionB = lines[counterLine+1]
+                    }
+                    else if i == 4{
+                        let optionC = lines[counterLine+1]
+                    }
+                    else if i == 5{
+                        let optionD = lines[counterLine+1]
+                    }
+                    else if i == 6{
+                        let correctAnswer = lines[counterLine+1]
+                    }
+                        
+                    else if i == 7{
+                        let moreInfo = lines[counterLine+1]
+                    }
+                    else if i == 8{
+                        let questionImage = lines[counterLine+1]
+                    }
+                    if i==8 {
+                        i=0
+                       // var questionInstance:Question = Question(question: <#T##String#>, optionA: <#T##String#>, optionB: <#T##String#>, optionC: <#T##String#>, optionD: <#T##String#>, correctAnswer: <#T##Int#>, moreInfo: <#T##String#>, questionImage: <#T##String#>)
+                    }
+                }
+            }
+            catch{
+                print(error)
+            }
+        }
+        func refresh(){
+            
+        }
     }
-    
-
-    
-
 }
+
