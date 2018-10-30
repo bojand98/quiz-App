@@ -18,6 +18,10 @@
 		3C6FF29E21847D3C00E3809C /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6FF29D21847D3C00E3809C /* ViewController3.swift */; };
 		3C6FF2A02184811A00E3809C /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6FF29F2184811A00E3809C /* GradientView.swift */; };
 		3C6FF2A42184882300E3809C /* Geo-Q&A.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3C6FF2A32184882300E3809C /* Geo-Q&A.txt */; };
+		3CAA83422188864B00D588D0 /* Sport-Q&A.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3CAA833F2188864A00D588D0 /* Sport-Q&A.txt */; };
+		3CAA83432188864B00D588D0 /* HIstory-Q&A.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3CAA83402188864A00D588D0 /* HIstory-Q&A.txt */; };
+		3CAA83442188864B00D588D0 /* Music-Q&A.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3CAA83412188864A00D588D0 /* Music-Q&A.txt */; };
+		3CAA834621888E6E00D588D0 /* ViewControllerScore4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAA834521888E6E00D588D0 /* ViewControllerScore4.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,10 @@
 		3C6FF29D21847D3C00E3809C /* ViewController3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
 		3C6FF29F2184811A00E3809C /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		3C6FF2A32184882300E3809C /* Geo-Q&A.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Geo-Q&A.txt"; path = "Resources/Geo-Q&A.txt"; sourceTree = "<group>"; };
+		3CAA833F2188864A00D588D0 /* Sport-Q&A.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Sport-Q&A.txt"; path = "Resources/Sport-Q&A.txt"; sourceTree = "<group>"; };
+		3CAA83402188864A00D588D0 /* HIstory-Q&A.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "HIstory-Q&A.txt"; path = "Resources/HIstory-Q&A.txt"; sourceTree = "<group>"; };
+		3CAA83412188864A00D588D0 /* Music-Q&A.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Music-Q&A.txt"; path = "Resources/Music-Q&A.txt"; sourceTree = "<group>"; };
+		3CAA834521888E6E00D588D0 /* ViewControllerScore4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerScore4.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,11 +114,15 @@
 			isa = PBXGroup;
 			children = (
 				3C6FF2A32184882300E3809C /* Geo-Q&A.txt */,
+				3CAA83402188864A00D588D0 /* HIstory-Q&A.txt */,
+				3CAA83412188864A00D588D0 /* Music-Q&A.txt */,
+				3CAA833F2188864A00D588D0 /* Sport-Q&A.txt */,
 				3C6EB154215A9F5500289C74 /* AppDelegate.swift */,
 				3C6FF29F2184811A00E3809C /* GradientView.swift */,
 				3C6EB156215A9F5500289C74 /* ViewController.swift */,
 				3C6FF29B21847D3600E3809C /* ViewController2.swift */,
 				3C6FF29D21847D3C00E3809C /* ViewController3.swift */,
+				3CAA834521888E6E00D588D0 /* ViewControllerScore4.swift */,
 				3C6EB158215A9F5500289C74 /* Main.storyboard */,
 				3C6EB15B215A9F5A00289C74 /* Assets.xcassets */,
 				3C6EB15D215A9F5A00289C74 /* LaunchScreen.storyboard */,
@@ -241,9 +253,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CAA83432188864B00D588D0 /* HIstory-Q&A.txt in Resources */,
+				3CAA83422188864B00D588D0 /* Sport-Q&A.txt in Resources */,
 				3C6EB15F215A9F5A00289C74 /* LaunchScreen.storyboard in Resources */,
 				3C6FF2A42184882300E3809C /* Geo-Q&A.txt in Resources */,
 				3C6EB15C215A9F5A00289C74 /* Assets.xcassets in Resources */,
+				3CAA83442188864B00D588D0 /* Music-Q&A.txt in Resources */,
 				3C6EB15A215A9F5500289C74 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,6 +288,7 @@
 				3C6EB155215A9F5500289C74 /* AppDelegate.swift in Sources */,
 				3C6FF2A02184811A00E3809C /* GradientView.swift in Sources */,
 				3C6FF29E21847D3C00E3809C /* ViewController3.swift in Sources */,
+				3CAA834621888E6E00D588D0 /* ViewControllerScore4.swift in Sources */,
 				3C6FF29C21847D3600E3809C /* ViewController2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

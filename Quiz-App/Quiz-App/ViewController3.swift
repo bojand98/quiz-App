@@ -7,8 +7,6 @@
 //
 
 import UIKit
-
-
 class Question{
     
     let question: String
@@ -33,10 +31,7 @@ class Question{
         self.questionImage=questionImage
     }
 }
-
-
 class ViewController3: UIViewController {
-
     
     @IBOutlet weak var questionCounterLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
@@ -53,21 +48,27 @@ class ViewController3: UIViewController {
     
     //actions bellow this
     
-    var answerPressedVar:Int?
+    var answerPressedVar:Int = 0
+    
     @IBAction func answerPressed(_ sender: UIButton) {
         if sender.tag == 1 {
             answerPressedVar = 1
+            print("Pressed option 1")
         }
         else if sender.tag == 2 {
             answerPressedVar = 2
+            print("Pressed option 2")
         }
         else if sender.tag == 3 {
             answerPressedVar = 3
+            print("Pressed option 3")
         }
         else if sender.tag == 4 {
             answerPressedVar = 4
+            print("Pressed option 4")
         }
     }
+
     
     var txtFile: String?
     var listOfQuestions:[Question] = []
@@ -76,12 +77,10 @@ class ViewController3: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        func shuffleQuestion(questionArr:[Question] )-> [Question]{
-            return questionArr.shuffled()
-        }
-        
-        
-        
+//        func shuffleQuestion(questionArr:[Question] )-> [Question]{
+//            return questionArr.shuffled()
+//        }
+    
         if let filePath = Bundle.main.path(forResource: "Geo-Q&A", ofType: "txt"){
             do {
                 //print("Ima fajl")
@@ -91,7 +90,7 @@ class ViewController3: UIViewController {
                 let lines = contents.split(separator: "\n")
                 var counterLine:Int = 0
                 var questionArray: [Question] = []
-//                print(lines.count)
+                //print(lines.count)
                 while counterLine+7 <= lines.count {
                     
                     let ques = lines[counterLine]
@@ -103,48 +102,37 @@ class ViewController3: UIViewController {
                     let moreInf = lines[counterLine+6]
                     let questionImg = lines[counterLine+7]
                     
-                    var questionInstnce = Question(question: String(ques), optionA: String(optA), optionB: String(optB), optionC:String(optC)
+                    let questionInstnce = Question(question: String(ques), optionA: String(optA), optionB: String(optB), optionC:String(optC)
                         , optionD: String(optD), correctAnswer: Int(correctAnsw)!, moreInfo: String(moreInf), questionImage: String(questionImg))
                     questionArray.append(questionInstnce)
-//                    print("EVE TI ")
-//                    print(questionInstnce.question)
+                    //print(questionInstnce.question)
                     counterLine+=8
                 }
                 
-                var shuffledArr = shuffleQuestion(questionArr: questionArray)
+                var shuffledArr = questionArray.shuffled()
                 var currentScore: Int = 0
                 var numOfCorrectAnsw:Int = 0
                 
-               
-                    for i in 0...9{
-                        questionCounterLabel.text = String(i+1) + "/10"
-                        scoreLabel.text = "Score: " + String(currentScore)
-                        questionLabel.text = shuffledArr[i].question
-                        optionA.setTitle(shuffledArr[i].optionA, for: .normal)
-                        optionB.setTitle(shuffledArr[i].optionB, for: .normal)
-                        optionC.setTitle(shuffledArr[i].optionC, for: .normal)
-                        optionD.setTitle(shuffledArr[i].optionD, for: .normal)
-                        moreInfoLabel.text = shuffledArr[i].moreInfo
-                        mainImage.image = UIImage(named: shuffledArr[i].questionImage)
-                        
-                        if answerPressedVar == shuffledArr[i].correctAnswer {
-                            currentScore += 10
-                            continue
-                        }
-                        else{
-                            break
-                        }
-                        
-                    }
+                questionCounterLabel.text = "0/10"
+                scoreLabel.text = "Score: " + String(currentScore)
+                questionLabel.text = shuffledArr[0].question
+                optionA.setTitle(shuffledArr[0].optionA, for: .normal)
+                optionB.setTitle(shuffledArr[0].optionB, for: .normal)
+                optionC.setTitle(shuffledArr[0].optionC, for: .normal)
+                optionD.setTitle(shuffledArr[0].optionD, for: .normal)
+                moreInfoLabel.text = shuffledArr[0].moreInfo
+                print(answerPressedVar)
+                mainImage.image = UIImage(named: shuffledArr[0].questionImage)
+                
                 
             }
             catch{
                 print("error")
             }
-        }
-       
+        } //endOfReadingFile
+    } //end of viewDidLoad()
+    
+    func refresh(){
         
-       
-    }
 }
-
+}
