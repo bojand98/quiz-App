@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -230,13 +231,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Geography-PNG-Transparent" width="409.60000610351562" height="409.60000610351562"/>
-        <image name="idea-icon-12424" width="512" height="512"/>
+        <image name="Geography-PNG-Transparent" width="170" height="170"/>
+        <image name="idea-icon-12424" width="170" height="170"/>
         <image name="itunes-icon-12" width="447" height="447"/>
-        <image name="quiz-letters" width="960" height="480"/>
-        <image name="red-check-mark-clipart" width="1200" height="1200"/>
-        <image name="sports-background-png-4" width="1000" height="1000"/>
-        <image name="unnamed" width="512" height="512"/>
+        <image name="quiz-letters" width="320" height="160"/>
+        <image name="red-check-mark-clipart" width="400" height="400"/>
+        <image name="sports-background-png-4" width="333" height="333"/>
+        <image name="unnamed" width="170" height="170"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="4pm-T0-tJ4"/>
