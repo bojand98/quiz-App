@@ -361,10 +361,10 @@
             </objects>
             <point key="canvasLocation" x="517.60000000000002" y="16.641679160419791"/>
         </scene>
-        <!--View Controller3-->
+        <!--ViewCOntroller3-->
         <scene sceneID="xej-gw-Zfv">
             <objects>
-                <viewController id="9Qb-9Z-0KV" customClass="ViewController3" customModule="Quiz_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="ViewCOntroller3" id="9Qb-9Z-0KV" customClass="ViewController3" customModule="Quiz_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aAj-z5-50E" customClass="GradientView" customModule="Quiz_App" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -378,13 +378,6 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="xx/10" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1zh-K9-ttv">
                                                 <rect key="frame" x="16" y="16" width="40.5" height="13"/>
                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                                                <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score : 999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4LA-83-CRN">
-                                                <rect key="frame" x="143" y="16" width="89.5" height="13"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -404,15 +397,12 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="7NO-4Q-GB0" firstAttribute="centerY" secondItem="kmf-nB-gmh" secondAttribute="centerY" id="4Q1-gx-3dH"/>
-                                            <constraint firstItem="4LA-83-CRN" firstAttribute="top" secondItem="kmf-nB-gmh" secondAttribute="top" constant="16" id="C8p-MX-Rvi"/>
                                             <constraint firstItem="1zh-K9-ttv" firstAttribute="leading" secondItem="kmf-nB-gmh" secondAttribute="leading" constant="16" id="Hyd-ss-Tux"/>
                                             <constraint firstAttribute="height" constant="45" id="OdN-4A-MWT"/>
                                             <constraint firstItem="1zh-K9-ttv" firstAttribute="centerY" secondItem="kmf-nB-gmh" secondAttribute="centerY" id="VSI-rh-Nwc"/>
                                             <constraint firstAttribute="trailing" secondItem="7NO-4Q-GB0" secondAttribute="trailing" constant="16" id="cLW-gG-Ggb"/>
-                                            <constraint firstItem="4LA-83-CRN" firstAttribute="centerX" secondItem="kmf-nB-gmh" secondAttribute="centerX" id="fDB-xQ-lE6"/>
                                             <constraint firstItem="7NO-4Q-GB0" firstAttribute="top" secondItem="kmf-nB-gmh" secondAttribute="top" constant="16" id="lEj-QH-ihr"/>
                                             <constraint firstItem="1zh-K9-ttv" firstAttribute="top" secondItem="kmf-nB-gmh" secondAttribute="top" constant="16" id="wk0-k9-Dxh"/>
-                                            <constraint firstItem="4LA-83-CRN" firstAttribute="centerY" secondItem="kmf-nB-gmh" secondAttribute="centerY" id="xZA-sJ-wMV"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w8Q-rz-IJl" userLabel="QuestionView">
@@ -559,17 +549,17 @@
                         <outlet property="optionD" destination="9dh-9a-Mtn" id="GgJ-Tp-kno"/>
                         <outlet property="questionCounterLabel" destination="1zh-K9-ttv" id="Ao1-90-typ"/>
                         <outlet property="questionLabel" destination="z6b-tU-dWO" id="GIN-at-yFR"/>
-                        <outlet property="scoreLabel" destination="4LA-83-CRN" id="wTE-w8-5cl"/>
+                        <segue destination="XvC-Ba-Xae" kind="show" identifier="lastScreen" id="H87-Vi-WlN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ks-ba-Z7r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1237.5999999999999" y="16.641679160419791"/>
+            <point key="canvasLocation" x="1263" y="17"/>
         </scene>
         <!--View Controller Score4-->
         <scene sceneID="NKi-jd-7cz">
             <objects>
-                <viewController id="XvC-Ba-Xae" customClass="ViewControllerScore4" customModule="Quiz_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="lastScreen" id="XvC-Ba-Xae" customClass="ViewControllerScore4" customModule="Quiz_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FxF-XT-26N" customClass="GradientView" customModule="Quiz_App" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -586,9 +576,6 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cup" translatesAutoresizingMaskIntoConstraints="NO" id="kxe-9B-yVJ">
-                                        <rect key="frame" x="35" y="111" width="189" height="175"/>
-                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Score Is" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7kS-JF-kkM">
                                         <rect key="frame" x="79" y="306" width="101" height="21"/>
                                         <constraints>
@@ -598,6 +585,9 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="cup" translatesAutoresizingMaskIntoConstraints="NO" id="kxe-9B-yVJ">
+                                        <rect key="frame" x="35" y="106" width="189" height="175"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>

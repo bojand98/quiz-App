@@ -34,7 +34,6 @@ class Question{
 class ViewController3: UIViewController {
     
     @IBOutlet weak var questionCounterLabel: UILabel!
-    @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var mainImage: UIImageView!
     
@@ -52,12 +51,15 @@ class ViewController3: UIViewController {
         refresh()
     }
     
+    var globalColor:UIColor?
     
     @IBAction func answerPressed(_ sender: UIButton) {
-        let answerGiven = sender.tag
-        if answerGiven == currentQuestion?.correctAnswer {
-            print("tocno")
-            //sender.tag
+        globalColor = sender.backgroundColor
+        let answerClicked = sender.tag
+        
+        if answerClicked == currentQuestion?.correctAnswer {
+            globalScore += 10
+            moreInfoLabel.isHidden = false
             if sender.tag == 1{
                 optionA.backgroundColor = UIColor.green
                 optionA.isEnabled = false
@@ -116,24 +118,25 @@ class ViewController3: UIViewController {
                 optionC.isEnabled = false
                 optionD.isEnabled = false
             }
-            print("ne e tocno")
         }
     }
-
+    
     
     var txtFile: String?
     var listOfQuestions:[Question] = []
     var currentQuestion:Question?
     
     var globalShuffledArr:[Question] = []
+    var globalScore = 0
+    
+    
+    
+    //------------VIEW DID LOAD -------------
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        func shuffleQuestion(questionArr:[Question] )-> [Question]{
-//            return questionArr.shuffled()
-//        }
-    
+       
         if let filePath = Bundle.main.path(forResource: "Geo-Q&A", ofType: "txt"){
             do {
                 //print("Ima fajl")
@@ -163,49 +166,57 @@ class ViewController3: UIViewController {
                 }//endOfReadingTXTFile
                 
                 var shuffledArr = questionArray.shuffled()
+                
                 globalShuffledArr = shuffledArr
-                var currentScore: Int = 0
-                var numOfCorrectAnsw:Int = 0
                 currentQuestion = questionArray[0]
-                questionCounterLabel.text = "0/10"
-                scoreLabel.text = "Score: " + String(currentScore)
+                questionCounterLabel.text = "1/10"
                 questionLabel.text = shuffledArr[0].question
                 optionA.setTitle(shuffledArr[0].optionA, for: .normal)
                 optionB.setTitle(shuffledArr[0].optionB, for: .normal)
                 optionC.setTitle(shuffledArr[0].optionC, for: .normal)
                 optionD.setTitle(shuffledArr[0].optionD, for: .normal)
+                moreInfoLabel.isHidden = true
                 moreInfoLabel.text = shuffledArr[0].moreInfo
                 mainImage.image = UIImage(named: shuffledArr[0].questionImage)
-                
                 
             }
             catch{
                 print("error")
             }
+
         } //endOfReadingFile
     } //end of viewDidLoad()
     
-   
+    var i: Int = 1
     func refresh(){
-        for i in 1...9{
-            var currentScore: Int = 0
-            var numOfCorrectAnsw:Int = 0
-            
+        if i <= 9{
             optionA.isEnabled = true
             optionB.isEnabled = true
             optionC.isEnabled = true
             optionD.isEnabled = true
+            optionA.backgroundColor = globalColor
+            optionB.backgroundColor = globalColor
+            optionC.backgroundColor = globalColor
+            optionD.backgroundColor = globalColor
             
             currentQuestion = globalShuffledArr[i]
-            questionCounterLabel.text = "0/10"
-            scoreLabel.text = "Score: " + String(currentScore)
+            var brojac = String(i+1)
+            questionCounterLabel.text = brojac + "/10"
             questionLabel.text = globalShuffledArr[i].question
             optionA.setTitle(globalShuffledArr[i].optionA, for: .normal)
             optionB.setTitle(globalShuffledArr[i].optionB, for: .normal)
             optionC.setTitle(globalShuffledArr[i].optionC, for: .normal)
             optionD.setTitle(globalShuffledArr[i].optionD, for: .normal)
+            moreInfoLabel.isHidden = true
             moreInfoLabel.text = globalShuffledArr[i].moreInfo
             mainImage.image = UIImage(named: globalShuffledArr[i].questionImage)
+             i += 1
         }
-}
+            
+        else if i>9{
+            performSegue(withIdentifier: "lastScreen", sender: self)
+//                shouldPerformSegue(withIdentifier: "lastScreen", sender: Any?.self)
+        }
+        
+    }// endOfRefresh
 }
