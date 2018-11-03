@@ -15,7 +15,6 @@ class ViewController: UIViewController ,UITextFieldDelegate{
     
    
     
-    
     var prom:String?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +24,20 @@ class ViewController: UIViewController ,UITextFieldDelegate{
         newLayer.frame = view.frame
         
         view.layer.insertSublayer(newLayer, at: 0)
+        
+        let defaults = UserDefaults.standard
+        let lastLaunch = defaults.string(forKey: "lastRun")
+        print(lastLaunch!)
+        
+        let now:Date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MM yyyy HH:mm:ss"
+        let dateString = dateFormatter.string(from: now)
+        defaults.set(dateString, forKey: "lastRun")
+        
+        defaults.set(name.text, forKey: "name")
+        name.text = defaults.string(forKey: "name")
+        
     }
 
 

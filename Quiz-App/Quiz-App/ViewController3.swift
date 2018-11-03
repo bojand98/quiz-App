@@ -48,24 +48,75 @@ class ViewController3: UIViewController {
     
     //actions bellow this
     
-    var answerPressedVar:Int = 0
+    @IBAction func nextButtonPressed(_ sender: Any) {
+        refresh()
+    }
+    
     
     @IBAction func answerPressed(_ sender: UIButton) {
-        if sender.tag == 1 {
-            answerPressedVar = 1
-            print("Pressed option 1")
-        }
-        else if sender.tag == 2 {
-            answerPressedVar = 2
-            print("Pressed option 2")
-        }
-        else if sender.tag == 3 {
-            answerPressedVar = 3
-            print("Pressed option 3")
-        }
-        else if sender.tag == 4 {
-            answerPressedVar = 4
-            print("Pressed option 4")
+        let answerGiven = sender.tag
+        if answerGiven == currentQuestion?.correctAnswer {
+            print("tocno")
+            //sender.tag
+            if sender.tag == 1{
+                optionA.backgroundColor = UIColor.green
+                optionA.isEnabled = false
+                optionB.isEnabled = false
+                optionC.isEnabled = false
+                optionD.isEnabled = false
+            }
+            else if sender.tag == 2 {
+                optionB.backgroundColor = UIColor.green
+                optionA.isEnabled = false
+                optionB.isEnabled = false
+                optionC.isEnabled = false
+                optionD.isEnabled = false
+            }
+            else if sender.tag == 3 {
+                optionC.backgroundColor = UIColor.green
+                optionA.isEnabled = false
+                optionB.isEnabled = false
+                optionC.isEnabled = false
+                optionD.isEnabled = false
+            }
+            else if sender.tag == 4 {
+                optionD.backgroundColor = UIColor.green
+                optionA.isEnabled = false
+                optionB.isEnabled = false
+                optionC.isEnabled = false
+                optionD.isEnabled = false
+            }
+            
+        }else{
+            if sender.tag == 1{
+                optionA.backgroundColor = UIColor.red
+                optionA.isEnabled = false
+                optionB.isEnabled = false
+                optionC.isEnabled = false
+                optionD.isEnabled = false
+            }
+            else if sender.tag == 2 {
+                optionB.backgroundColor = UIColor.red
+                optionA.isEnabled = false
+                optionB.isEnabled = false
+                optionC.isEnabled = false
+                optionD.isEnabled = false
+            }
+            else if sender.tag == 3 {
+                optionC.backgroundColor = UIColor.red
+                optionA.isEnabled = false
+                optionB.isEnabled = false
+                optionC.isEnabled = false
+                optionD.isEnabled = false
+            }
+            else if sender.tag == 4 {
+                optionD.backgroundColor = UIColor.red
+                optionA.isEnabled = false
+                optionB.isEnabled = false
+                optionC.isEnabled = false
+                optionD.isEnabled = false
+            }
+            print("ne e tocno")
         }
     }
 
@@ -73,6 +124,8 @@ class ViewController3: UIViewController {
     var txtFile: String?
     var listOfQuestions:[Question] = []
     var currentQuestion:Question?
+    
+    var globalShuffledArr:[Question] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -107,12 +160,13 @@ class ViewController3: UIViewController {
                     questionArray.append(questionInstnce)
                     //print(questionInstnce.question)
                     counterLine+=8
-                }
+                }//endOfReadingTXTFile
                 
                 var shuffledArr = questionArray.shuffled()
+                globalShuffledArr = shuffledArr
                 var currentScore: Int = 0
                 var numOfCorrectAnsw:Int = 0
-                
+                currentQuestion = questionArray[0]
                 questionCounterLabel.text = "0/10"
                 scoreLabel.text = "Score: " + String(currentScore)
                 questionLabel.text = shuffledArr[0].question
@@ -121,7 +175,6 @@ class ViewController3: UIViewController {
                 optionC.setTitle(shuffledArr[0].optionC, for: .normal)
                 optionD.setTitle(shuffledArr[0].optionD, for: .normal)
                 moreInfoLabel.text = shuffledArr[0].moreInfo
-                print(answerPressedVar)
                 mainImage.image = UIImage(named: shuffledArr[0].questionImage)
                 
                 
@@ -132,7 +185,27 @@ class ViewController3: UIViewController {
         } //endOfReadingFile
     } //end of viewDidLoad()
     
+   
     func refresh(){
-        
+        for i in 1...9{
+            var currentScore: Int = 0
+            var numOfCorrectAnsw:Int = 0
+            
+            optionA.isEnabled = true
+            optionB.isEnabled = true
+            optionC.isEnabled = true
+            optionD.isEnabled = true
+            
+            currentQuestion = globalShuffledArr[i]
+            questionCounterLabel.text = "0/10"
+            scoreLabel.text = "Score: " + String(currentScore)
+            questionLabel.text = globalShuffledArr[i].question
+            optionA.setTitle(globalShuffledArr[i].optionA, for: .normal)
+            optionB.setTitle(globalShuffledArr[i].optionB, for: .normal)
+            optionC.setTitle(globalShuffledArr[i].optionC, for: .normal)
+            optionD.setTitle(globalShuffledArr[i].optionD, for: .normal)
+            moreInfoLabel.text = globalShuffledArr[i].moreInfo
+            mainImage.image = UIImage(named: globalShuffledArr[i].questionImage)
+        }
 }
 }
