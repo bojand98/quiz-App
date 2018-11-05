@@ -36,6 +36,7 @@ class ViewController3: UIViewController {
     @IBOutlet weak var questionCounterLabel: UILabel!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var mainImage: UIImageView!
+    @IBOutlet weak var timerLabel: UILabel!
     
     //outlets for Buttons bellow
     
@@ -131,13 +132,18 @@ class ViewController3: UIViewController {
     
     
     
+    var seconds = 15
+    
+    
     //------------VIEW DID LOAD -------------
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
-        if let filePath = Bundle.main.path(forResource: "Geo-Q&A", ofType: "txt"){
+        globalScore = 0
+        
+        
+        if let filePath = Bundle.main.path(forResource: "Music-Q&A", ofType: "txt"){
             do {
                 //print("Ima fajl")
                 let contents = try String(contentsOfFile: filePath, encoding: .utf8)
@@ -168,7 +174,7 @@ class ViewController3: UIViewController {
                 var shuffledArr = questionArray.shuffled()
                 
                 globalShuffledArr = shuffledArr
-                currentQuestion = questionArray[0]
+                currentQuestion = shuffledArr[0]
                 questionCounterLabel.text = "1/10"
                 questionLabel.text = shuffledArr[0].question
                 optionA.setTitle(shuffledArr[0].optionA, for: .normal)
@@ -179,6 +185,19 @@ class ViewController3: UIViewController {
                 moreInfoLabel.text = shuffledArr[0].moreInfo
                 mainImage.image = UIImage(named: shuffledArr[0].questionImage)
                 
+                Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (questiontimer) in
+                    
+                    self.timerLabel.text = String(self.seconds) + " seconds"
+                    
+                    if self.seconds == 0 {
+                        questiontimer.invalidate()
+                        self.optionA.isEnabled = false
+                        self.optionB.isEnabled = false
+                        self.optionC.isEnabled = false
+                        self.optionD.isEnabled = false
+                    }
+                    self.seconds -= 1
+                }
             }
             catch{
                 print("error")
@@ -186,6 +205,8 @@ class ViewController3: UIViewController {
 
         } //endOfReadingFile
     } //end of viewDidLoad()
+    
+    
     
     var i: Int = 1
     func refresh(){
@@ -200,7 +221,7 @@ class ViewController3: UIViewController {
             optionD.backgroundColor = globalColor
             
             currentQuestion = globalShuffledArr[i]
-            var brojac = String(i+1)
+            let brojac = String(i+1)
             questionCounterLabel.text = brojac + "/10"
             questionLabel.text = globalShuffledArr[i].question
             optionA.setTitle(globalShuffledArr[i].optionA, for: .normal)
@@ -211,11 +232,27 @@ class ViewController3: UIViewController {
             moreInfoLabel.text = globalShuffledArr[i].moreInfo
             mainImage.image = UIImage(named: globalShuffledArr[i].questionImage)
              i += 1
+            self.seconds = 15
+            Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (questiontimer) in
+                
+                self.timerLabel.text = String(self.seconds) + " seconds"
+                
+                if self.seconds == 0 {
+                    questiontimer.invalidate()
+                    self.optionA.isEnabled = false
+                    self.optionB.isEnabled = false
+                    self.optionC.isEnabled = false
+                    self.optionD.isEnabled = false
+                }
+                self.seconds -= 1
+            }
         }
             
         else if i>9{
+            print(globalScore)
             performSegue(withIdentifier: "lastScreen", sender: self)
 //                shouldPerformSegue(withIdentifier: "lastScreen", sender: Any?.self)
+           
         }
         
     }// endOfRefresh

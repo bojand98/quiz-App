@@ -393,6 +393,16 @@
                                                     <action selector="nextButtonPressed:" destination="9Qb-9Z-0KV" eventType="touchUpInside" id="hl1-Nd-YQ0"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKk-OS-651">
+                                                <rect key="frame" x="187.5" y="12" width="0.0" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="zid-1y-xwH"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.67779014780000002" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -401,8 +411,10 @@
                                             <constraint firstAttribute="height" constant="45" id="OdN-4A-MWT"/>
                                             <constraint firstItem="1zh-K9-ttv" firstAttribute="centerY" secondItem="kmf-nB-gmh" secondAttribute="centerY" id="VSI-rh-Nwc"/>
                                             <constraint firstAttribute="trailing" secondItem="7NO-4Q-GB0" secondAttribute="trailing" constant="16" id="cLW-gG-Ggb"/>
+                                            <constraint firstItem="sKk-OS-651" firstAttribute="centerY" secondItem="kmf-nB-gmh" secondAttribute="centerY" id="iZH-ul-1sD"/>
                                             <constraint firstItem="7NO-4Q-GB0" firstAttribute="top" secondItem="kmf-nB-gmh" secondAttribute="top" constant="16" id="lEj-QH-ihr"/>
                                             <constraint firstItem="1zh-K9-ttv" firstAttribute="top" secondItem="kmf-nB-gmh" secondAttribute="top" constant="16" id="wk0-k9-Dxh"/>
+                                            <constraint firstItem="sKk-OS-651" firstAttribute="centerX" secondItem="kmf-nB-gmh" secondAttribute="centerX" id="x96-VY-qRN"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w8Q-rz-IJl" userLabel="QuestionView">
@@ -549,12 +561,13 @@
                         <outlet property="optionD" destination="9dh-9a-Mtn" id="GgJ-Tp-kno"/>
                         <outlet property="questionCounterLabel" destination="1zh-K9-ttv" id="Ao1-90-typ"/>
                         <outlet property="questionLabel" destination="z6b-tU-dWO" id="GIN-at-yFR"/>
+                        <outlet property="timerLabel" destination="sKk-OS-651" id="CSi-Ru-BjL"/>
                         <segue destination="XvC-Ba-Xae" kind="show" identifier="lastScreen" id="H87-Vi-WlN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ks-ba-Z7r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1263" y="17"/>
+            <point key="canvasLocation" x="1261.5999999999999" y="16.641679160419791"/>
         </scene>
         <!--View Controller Score4-->
         <scene sceneID="NKi-jd-7cz">
@@ -564,8 +577,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jyH-IY-Zw2">
-                                <rect key="frame" x="56" y="95" width="259" height="367"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jyH-IY-Zw2">
+                                <rect key="frame" x="52" y="105" width="259" height="367"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="congratulations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ga-af-pMN">
                                         <rect key="frame" x="70" y="70" width="119" height="21"/>

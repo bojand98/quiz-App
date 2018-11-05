@@ -27,7 +27,7 @@ class ViewController: UIViewController ,UITextFieldDelegate{
         
         let defaults = UserDefaults.standard
         let lastLaunch = defaults.string(forKey: "lastRun")
-        print(lastLaunch!)
+        //print(lastLaunch!)
         
         let now:Date = Date()
         let dateFormatter = DateFormatter()

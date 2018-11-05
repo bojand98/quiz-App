@@ -14,6 +14,8 @@ class ViewControllerScore4: UIViewController {
     @IBOutlet weak var outcomeImage: UIImageView!
     @IBOutlet weak var totalScoreLabel: UILabel!
     
+    var finalScore:Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

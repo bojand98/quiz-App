@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Quiz-App.xcodeproj">
+      location = "group:/Users/bojandimitrijevski/Desktop/Repo-Quiz/Quiz-App/Quiz-App/HIstory-Q&amp;A.txt">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>
