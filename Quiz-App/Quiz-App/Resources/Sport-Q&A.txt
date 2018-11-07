@@ -5,7 +5,7 @@ Rafael Nadal
 Grigor Dimitrov
 1
 More info: Roger Federer is a Swiss Tennis Player. Many people have called him the greatest male tennis player of all time.
-grand
+grandslam
 What city hosted the 2012 Summer Olympics?
 Rome, Italy
 London, England
@@ -29,7 +29,7 @@ How many balls are used in a game of Pool?
 17
 3
 More info : 16
-ballPool
+poolGame
 What country hosted the 2006 FIFA World Cup?
 Montenegro
 Spain
@@ -45,7 +45,7 @@ How many rings are there on the Olympic flag?
 5
 4
 More info: The Olympic flag has five linked rings representing the five parts of the world joined by the Games: the Americas, Europe, Asia, Africa, and Australia.
-olympicGames
+olympic
 What is a golf ball made of?
 Rubber
 Stone
@@ -53,7 +53,7 @@ Iron
 Alumninium
 1
 More info: A golf ball is made mostly of rubber and has a thin, plastic cover.
-golfBall
+golf
 In which country was golf invented?
 Spain 
 India
@@ -61,7 +61,7 @@ Scotland
 France
 3
 More info: Although its name is originally Dutch, the game of golf is believed to have been invented in Scotland.
-golf
+golfGame
 How many holes are in a bowling ball?
 2
 3

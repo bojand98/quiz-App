@@ -40,9 +40,33 @@ class ViewController2: UIViewController {
     }
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
 
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "geo"{
+            if let tretController = segue.destination as? ViewController3{
+                tretController.category = 1
+            }
+        }
+        
+        if segue.identifier == "history"{
+            if let tretController = segue.destination as? ViewController3{
+                tretController.category = 2
+            }
+        }
+        if segue.identifier == "music"{
+            if let tretController = segue.destination as? ViewController3{
+                tretController.category = 3
+            }
+        }
+        if segue.identifier == "sport"{
+            if let tretController = segue.destination as? ViewController3{
+                tretController.category = 4
+            }
+        }
     }
 }

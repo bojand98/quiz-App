@@ -133,7 +133,7 @@ class ViewController3: UIViewController {
     
     
     var seconds = 15
-    
+    var category:Int?
     
     //------------VIEW DID LOAD -------------
     
@@ -141,9 +141,25 @@ class ViewController3: UIViewController {
         super.viewDidLoad()
         
         globalScore = 0
+        //print(category)
+        
+        var quizCategory:String=""
+        
+        if(category == 1){
+            quizCategory="Geo-Q&A"
+        }
+        else if(category == 2){
+            quizCategory="HIstory-Q&A"
+        }
+        else if(category == 3){
+            quizCategory="Music-Q&A"
+        }
+        else if(category == 4){
+            quizCategory="Sport-Q&A"
+        }
         
         
-        if let filePath = Bundle.main.path(forResource: "Music-Q&A", ofType: "txt"){
+        if let filePath = Bundle.main.path(forResource: quizCategory, ofType: "txt"){
             do {
                 //print("Ima fajl")
                 let contents = try String(contentsOfFile: filePath, encoding: .utf8)
@@ -249,11 +265,19 @@ class ViewController3: UIViewController {
         }
             
         else if i>9{
-            print(globalScore)
+            //print(globalScore)
+            
             performSegue(withIdentifier: "lastScreen", sender: self)
-//                shouldPerformSegue(withIdentifier: "lastScreen", sender: Any?.self)
+            
            
         }
         
     }// endOfRefresh
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "lastScreen"{
+            if let scoreController = segue.destination as? ViewControllerScore4{
+                scoreController.finalScore = globalScore
+            }
+        }
+    }
 }

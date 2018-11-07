@@ -75,7 +75,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="knP-YX-Ba7" kind="show" id="Pj1-fI-m7d"/>
+                                    <segue destination="knP-YX-Ba7" kind="show" identifier="start" id="Pj1-fI-m7d"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fC8-Qk-MOK">
@@ -118,6 +118,9 @@
                     <navigationItem key="navigationItem" id="mtk-ge-qzk"/>
                     <connections>
                         <outlet property="name" destination="fC8-Qk-MOK" id="RuJ-YR-DCL"/>
+                        <outlet property="scoreButton" destination="I2A-zf-5v9" id="eR8-HC-r1J"/>
+                        <outlet property="startButton" destination="0y4-PS-7M0" id="IBl-lN-kCW"/>
+                        <outlet property="whoisplayingLabel" destination="Bqz-EH-0JL" id="82J-FF-DL7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -162,7 +165,7 @@
                                                         </state>
                                                         <connections>
                                                             <action selector="quizTypeButtonPressed:" destination="knP-YX-Ba7" eventType="touchUpInside" id="0sH-e8-vL0"/>
-                                                            <segue destination="9Qb-9Z-0KV" kind="show" id="AoD-1Y-eqm"/>
+                                                            <segue destination="9Qb-9Z-0KV" kind="show" identifier="geo" id="AoD-1Y-eqm"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OKJ-II-zEI">
@@ -174,7 +177,7 @@
                                                         <state key="normal" image="Geography"/>
                                                         <connections>
                                                             <action selector="quizTypeButtonPressed:" destination="knP-YX-Ba7" eventType="touchUpInside" id="2s1-TR-8h9"/>
-                                                            <segue destination="9Qb-9Z-0KV" kind="show" id="ZRm-BP-2ew"/>
+                                                            <segue destination="9Qb-9Z-0KV" kind="show" identifier="geo" id="ZRm-BP-2ew"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -198,7 +201,7 @@
                                                         <state key="normal" image="iTunes-icon"/>
                                                         <connections>
                                                             <action selector="quizTypeButtonPressed:" destination="knP-YX-Ba7" eventType="touchUpInside" id="aM2-GL-uVX"/>
-                                                            <segue destination="9Qb-9Z-0KV" kind="show" id="TzA-Xx-1Kr"/>
+                                                            <segue destination="9Qb-9Z-0KV" kind="show" identifier="music" id="TzA-Xx-1Kr"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2w-k9-HIf">
@@ -213,7 +216,7 @@
                                                         </state>
                                                         <connections>
                                                             <action selector="quizTypeButtonPressed:" destination="knP-YX-Ba7" eventType="touchUpInside" id="OGb-61-udn"/>
-                                                            <segue destination="9Qb-9Z-0KV" kind="show" id="HBB-wd-ACV"/>
+                                                            <segue destination="9Qb-9Z-0KV" kind="show" identifier="music" id="HBB-wd-ACV"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -249,7 +252,7 @@
                                                         <state key="normal" image="History-Icon"/>
                                                         <connections>
                                                             <action selector="quizTypeButtonPressed:" destination="knP-YX-Ba7" eventType="touchUpInside" id="1Ou-DH-Bzi"/>
-                                                            <segue destination="9Qb-9Z-0KV" kind="show" id="PCS-2X-fuR"/>
+                                                            <segue destination="9Qb-9Z-0KV" kind="show" identifier="history" id="PCS-2X-fuR"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JC7-u9-NqJ">
@@ -264,7 +267,7 @@
                                                         </state>
                                                         <connections>
                                                             <action selector="quizTypeButtonPressed:" destination="knP-YX-Ba7" eventType="touchUpInside" id="I5p-Lp-Hr6"/>
-                                                            <segue destination="9Qb-9Z-0KV" kind="show" id="4tL-Wa-tph"/>
+                                                            <segue destination="9Qb-9Z-0KV" kind="show" identifier="history" id="4tL-Wa-tph"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -288,7 +291,7 @@
                                                         <state key="normal" backgroundImage="Sport-Icon"/>
                                                         <connections>
                                                             <action selector="quizTypeButtonPressed:" destination="knP-YX-Ba7" eventType="touchUpInside" id="p93-f7-IE8"/>
-                                                            <segue destination="9Qb-9Z-0KV" kind="show" id="xRG-hy-Kwq"/>
+                                                            <segue destination="9Qb-9Z-0KV" kind="show" identifier="sport" id="xRG-hy-Kwq"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oan-WY-CwB">
@@ -299,7 +302,7 @@
                                                         </state>
                                                         <connections>
                                                             <action selector="quizTypeButtonPressed:" destination="knP-YX-Ba7" eventType="touchUpInside" id="iWC-wF-Dfc"/>
-                                                            <segue destination="9Qb-9Z-0KV" kind="show" id="mOU-Qo-GRz"/>
+                                                            <segue destination="9Qb-9Z-0KV" kind="show" identifier="sport" id="mOU-Qo-GRz"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -580,8 +583,8 @@
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jyH-IY-Zw2">
                                 <rect key="frame" x="52" y="105" width="259" height="367"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="congratulations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ga-af-pMN">
-                                        <rect key="frame" x="70" y="70" width="119" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ga-af-pMN">
+                                        <rect key="frame" x="69" y="70" width="121.5" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="hIH-KG-FZ7"/>
                                         </constraints>
@@ -602,7 +605,7 @@
                                         <rect key="frame" x="35" y="106" width="189" height="175"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="7Ga-af-pMN" firstAttribute="top" secondItem="jyH-IY-Zw2" secondAttribute="top" constant="70" id="2EF-7p-caH"/>
                                     <constraint firstItem="kxe-9B-yVJ" firstAttribute="top" secondItem="7Ga-af-pMN" secondAttribute="bottom" constant="20" id="2wM-9T-b6N"/>
@@ -654,6 +657,6 @@
         <image name="red-check-mark-clipart" width="1200" height="1200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xRG-hy-Kwq"/>
+        <segue reference="HBB-wd-ACV"/>
     </inferredMetricsTieBreakers>
 </document>

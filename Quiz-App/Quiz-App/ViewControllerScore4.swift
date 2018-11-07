@@ -14,12 +14,12 @@ class ViewControllerScore4: UIViewController {
     @IBOutlet weak var outcomeImage: UIImageView!
     @IBOutlet weak var totalScoreLabel: UILabel!
     
-    var finalScore:Int?
+   var finalScore:Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        totalScoreLabel.text = "Your score is: " + String(finalScore!) + "/100"
         // Do any additional setup after loading the view.
     }
-
 }
